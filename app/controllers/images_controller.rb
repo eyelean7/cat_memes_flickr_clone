@@ -4,7 +4,11 @@ class ImagesController < ApplicationController
     render :index
   end
   def create
-    @image = Image.create(image_params)
+    if Image.create(image_params)
+      redirect_to images_path
+    else
+      redirect_to root_path
+    end
   end
 
   private

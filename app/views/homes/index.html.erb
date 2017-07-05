@@ -1,7 +1,7 @@
 <h1>YOU WORK</h1>
 
 <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-
+<%= link_to 'Profile', user_path(current_user.id) %>
 
 
 <%= simple_form_for @image, url: images_path do |form| %>
