@@ -1,1 +1,10 @@
 <h1>YOU WORK</h1>
+
+<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+
+
+
+<%= simple_form_for @image, url: images_path do |form| %>
+  <%= form.input :image_file, as: :file %>
+  <%= form.submit %>
+<% end %>

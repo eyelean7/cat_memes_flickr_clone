@@ -1,5 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  Paperclip.options[:command_path] = "/usr/local/bin/"
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # In the development environment your application's code is reloaded on
@@ -53,6 +54,5 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   # upload files with paperclip
-  Paperclip.options[:command_path] = "/usr/local/bin/"
 
 end
