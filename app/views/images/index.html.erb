@@ -1,0 +1,7 @@
+
+<h1>Haz Cat Memez</h1>
+
+
+<% @images.each do |image| %>
+<%= image_tag image.image_file.url(:medium) %>
+<% end %>
