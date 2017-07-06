@@ -5,14 +5,9 @@
 <% @images.each do |image| %>
 <%= image_tag image.image_file.url(:medium) %>
 <% end %>
- 
+
 <% if current_user %>
 <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
 
 <%= link_to 'Profile', user_path(current_user.id) %>
-<% end %>
-
-<%= simple_form_for @image, url: images_path do |form| %>
-  <%= form.input :image_file, as: :file %>
-  <%= form.submit %>
 <% end %>
