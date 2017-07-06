@@ -4,7 +4,7 @@ class ImagesController < ApplicationController
     render :index
   end
   def create
-    if Image.create(image_params)
+    if current_user.images.create(image_params)
       redirect_to images_path
     else
       redirect_to root_path

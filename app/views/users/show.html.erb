@@ -4,3 +4,8 @@
   <%= form.input :image_file, as: :file %>
   <%= form.submit %>
 <% end %>
+
+<br>
+<% @images.each do |image| %>
+<%= image_tag image.image_file.url(:medium) %>
+<% end %>

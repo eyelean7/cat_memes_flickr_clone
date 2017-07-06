@@ -2,12 +2,15 @@
 <h1>Haz Cat Memez</h1>
 
 
-<% @images.each do |image| %>
-<%= image_tag image.image_file.url(:medium) %>
-<% end %>
+
 
 <% if current_user %>
 <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
 
 <%= link_to 'Profile', user_path(current_user.id) %>
+<% end %>
+<br>
+
+<% @images.each do |image| %>
+<%= image_tag image.image_file.url(:medium) %>
 <% end %>
