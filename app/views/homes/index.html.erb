@@ -1,10 +1,10 @@
-<h1>YOU WORK</h1>
 
+<h1>HAz SplaSH PagE</h1>
+<% if !current_user %>
+<%= link_to "Sign Up", new_user_registration_path %>
+<% end %>
+<% if current_user %>
 <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+
 <%= link_to 'Profile', user_path(current_user.id) %>
-
-
-<%= simple_form_for @image, url: images_path do |form| %>
-  <%= form.input :image_file, as: :file %>
-  <%= form.submit %>
 <% end %>
