@@ -1,8 +1,29 @@
 <h1>DUz Stuf</h1>
 
 
+<%= image_tag @image.image_file.url(:medium) %>
+
+<%= form_for @image do |f| %>
+
+<div class="field">
+  <% @keywords.each do |keyword| %>
+  <%= check_box_tag "image[keyword_ids][]", keyword.id %>
+  <%= keyword.keyword %>
+  <br>
+  <% end %>
+  <div class="actions">
+    <%= f.submit %>
+
+  </div>
+</div>
+<% end %>
+
+
+
 <p>
   this is where comments go
 </p>
-
-<h4>delete will here(private)</h4>
+<%= link_to "Update", edit_image_path(@image)%>
+<p><%= link_to "Delete", image_path(@image),
+                         :data => {:confirm => "I am a pancake!",
+                                   :method => "delete"} %></p>

@@ -4,4 +4,6 @@ class Image < ApplicationRecord
 
   has_many :collections
   has_many :users, :through => :collections
+  has_many :tags
+  has_many :keywords, :through => :tags
 end
