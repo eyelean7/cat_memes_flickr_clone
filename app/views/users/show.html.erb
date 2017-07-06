@@ -7,5 +7,7 @@
 
 <br>
 <% @images.each do |image| %>
-<%= image_tag image.image_file.url(:medium) %>
+  <%= link_to image_path(image) do %>
+    <%= image_tag image.image_file.url(:medium) %>
+  <% end %>
 <% end %>

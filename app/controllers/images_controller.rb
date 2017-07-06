@@ -10,6 +10,9 @@ class ImagesController < ApplicationController
       redirect_to root_path
     end
   end
+  def show
+    @image = Image.find(params[:id])
+  end
 
   private
   def image_params

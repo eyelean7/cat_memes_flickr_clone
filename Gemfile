@@ -13,6 +13,9 @@ gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
